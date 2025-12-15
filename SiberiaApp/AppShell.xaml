@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SiberiaApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SiberiaApp"
+    Title="SiberiaApp"
+    FlyoutBehavior="Flyout">
+
+    <FlyoutItem Icon="user.png" Title="Личный кабинет">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Настройки">
+        <ShellContent
+            Title="Настройки"/>
+    </FlyoutItem>
+</Shell>
