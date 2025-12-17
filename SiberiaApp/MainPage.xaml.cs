@@ -3,10 +3,10 @@ namespace SiberiaApp
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(MainMenu mm)
         {
             InitializeComponent();
-            BindingContext = new MainMenu();
+            BindingContext = mm;
         }
     }
 }

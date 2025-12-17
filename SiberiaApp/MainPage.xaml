@@ -31,7 +31,10 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Button Text="{Binding Title}"
-                                    Margin="10"/>
+                                    BackgroundColor="{Binding BackgroundColor}"
+                                    Margin="10"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}},
+                                                  Path=BindingContext.NavigateCommand}"/>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
@@ -44,9 +47,9 @@
                 Padding="10"
                 HeightRequest="60">
             <HorizontalStackLayout Spacing="10" HorizontalOptions="CenterAndExpand">
-                <Button Text="Отчёты"  ImageSource="reports.png" FontFamily="roboto"/>
-                <Button Text="Предприятие" ImageSource="sklad.png" FontFamily="roboto"/>
-                <Button Text="Главное меню" ImageSource="main_menu.png" FontFamily="roboto"/>
+                <Button Text="Отчёты"  ImageSource="reports.png" FontFamily="roboto" BackgroundColor="#008676" Command="{Binding NavigateCommand}" CommandParameter="orders"/>
+                <Button Text="Предприятие" ImageSource="sklad.png" FontFamily="roboto" BackgroundColor="#008676" Command="{Binding NavigateCommand}" CommandParameter="products"/>
+                <Button Text="Главное меню" ImageSource="main_menu.png" FontFamily="roboto" BackgroundColor="#008676" Command="{Binding NavigateCommand}" CommandParameter="mainMenu"/>
             </HorizontalStackLayout>
         </Border>
 
