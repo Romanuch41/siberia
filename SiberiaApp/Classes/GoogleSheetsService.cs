@@ -11,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace SiberiaApp.Classes
 {
-    internal class GoogleSheets
+    internal class GoogleSheetsService
     {
         private readonly string[] _scopes = { DriveService.Scope.DriveReadonly }; // набор прав
         private readonly ILogger<ServiceGoogleDrive> _logger; // логер
-        private SheetsService _sheetsService; // сервис для googlesheets
+        private SheetsService _sheetsService; // сервис для GoogleSheetsService
 
-        public GoogleSheets(ILogger<ServiceGoogleDrive> logger)
+        public GoogleSheetsService(ILogger<ServiceGoogleDrive> logger)
         {
             _logger = logger;
         }
