@@ -12,6 +12,10 @@ namespace SiberiaApp.Classes.Elements
     {
         [ObservableProperty]
         private string title = string.Empty;
+        [ObservableProperty]
+        private string backgroundColor = string.Empty;
+        [ObservableProperty]
+        private string commandId = string.Empty;
 
         public IRelayCommand? Command { get; set; }
 

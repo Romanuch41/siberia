@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SiberiaApp.Classes.Elements
 {
-    public partial class Card
+    public partial class CardModel
     {
         string name;
         string price;
         string date;
 
-        public Card(string name, string price, string date)
+        public CardModel(string name, string price, string date)
         {
             this.name = name;
             this.price = price;

@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 namespace SiberiaApp.Classes
 {
 
-    class TableManager
+    public class TableManager
     {
         TableSheetsList tables;
 
@@ -47,13 +47,13 @@ namespace SiberiaApp.Classes
         }
     }
 
-    internal class TableSheetsList
+    public class TableSheetsList
     {
         [JsonPropertyName("sheets")]
         public required List<TableFromJson> sheets { get; set; }
     }
 
-    internal class TableFromJson
+    public class TableFromJson
     {
         [JsonPropertyName("id")]
         public required string id { get; set; }

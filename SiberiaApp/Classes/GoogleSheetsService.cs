@@ -17,7 +17,7 @@ namespace SiberiaApp.Classes
         private readonly ILogger<ServiceGoogleDrive> _logger; // логер
         private SheetsService _sheetsService; // сервис для GoogleSheetsService
 
-        public GoogleSheetsService(ILogger<ServiceGoogleDrive> logger)
+        public GoogleSheetsService(ILogger<ServiceGoogleDrive> logger = null)
         {
             _logger = logger;
         }
