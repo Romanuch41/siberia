@@ -20,7 +20,9 @@ namespace SiberiaApp.Classes.ViewModels
         private ObservableCollection<ButtonModel> buttons = new();
 
         [ObservableProperty]
-        private string currentText = "Главное меню";   // для наглядности, что навигация работает
+        private string currentText;   // для наглядности, что навигация работает
+        [ObservableProperty]
+        private string mainTitle = "Главное меню";
 
         public MainMenu()
         {
@@ -32,14 +34,22 @@ namespace SiberiaApp.Classes.ViewModels
         }
 
         [RelayCommand]
-        private void Navigate(string commandId)
+        private async Task Navigate(string route)
         {
-            CurrentText = commandId switch
+            System.Diagnostics.Debug.WriteLine($"🔥 Navigate вызван: {route}");
+
+
+            // Если хочешь ещё менять заголовок:
+            MainTitle = route switch
             {
-                "mainMenu" => "Мы в главном меню",
-                "orders" => "Мы в заказах",
-                _ => $"Неизвестная команда: {commandId}"
+                "mainMenu" => "Главное меню",
+                "reports" => "Отчеты",
+                "SettingsPage" => "Настройки",
+                _ => $"Неизвестный маршрут: {route}"
             };
+
+            System.Diagnostics.Debug.WriteLine($"MainTitle изменён на: '{MainTitle}'");
         }
+
     }
 }

@@ -13,7 +13,7 @@ namespace SiberiaApp.Classes.Elements
         [ObservableProperty]
         private string title = string.Empty;
         [ObservableProperty]
-        private string backgroundColor = string.Empty;
+        private string backgroundColor = "#008676";
         [ObservableProperty]
         private string commandId = string.Empty;
 

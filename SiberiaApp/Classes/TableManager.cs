@@ -13,7 +13,7 @@ namespace SiberiaApp.Classes
 
     public class TableManager
     {
-        TableSheetsList tables;
+        public TableSheetsList tables;
 
 
         public TableManager() { }
