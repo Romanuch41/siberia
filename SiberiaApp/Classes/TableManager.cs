@@ -1,63 +1,72 @@
-﻿using Google.Apis.Sheets.v4.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Threading.Tasks;
-using System.Linq.Expressions;
 
 namespace SiberiaApp.Classes
 {
-
     public class TableManager
     {
-        public TableSheetsList tables;
+        private readonly GoogleSheetsService _sheetsService;
+        private string TableData = Path.Combine(AppContext.BaseDirectory, "json", "tablecontent.json");
+        private SheetsConfigRoot Sheets;
 
-
-        public TableManager() { }
-
-        public void GetTables(string name)
+        public TableManager(GoogleSheetsService sheetsService)
         {
-            try
-            {
-                if (File.Exists("tablecontent.json"))
-                    throw new FileNotFoundException("File not found");
+            _sheetsService = sheetsService;
 
-                string json = File.ReadAllText("tablecontent.json");
-                if (string.IsNullOrWhiteSpace(json))
-                    throw new ArgumentException("JSON file is empty or null", nameof(json));
+            var json = File.ReadAllText(TableData);
+            Sheets = JsonSerializer.Deserialize<SheetsConfigRoot>(json) ?? new SheetsConfigRoot();
 
-                tables = JsonSerializer.Deserialize<TableSheetsList>(json)
-                    ?? throw new InvalidOperationException("Filed while deserilization");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error while load tables {ex.Message}");
-            }
+            Debug.WriteLine($"Load tables {Sheets.sheets.Count}");
         }
 
-        public TableFromJson SearchTable(string name)
+        public Task<IList<IList<object>>> ReadTableAsync(CancellationToken ct = default)
         {
-            if (tables?.sheets == null || tables.sheets.Count == 0)
-                throw new InvalidOperationException("Data tables is empty");
+            var cfg = Sheets.sheets
+            .FirstOrDefault(s => s.name.Equals("Reports", StringComparison.OrdinalIgnoreCase));
 
-            return tables?.sheets?.FirstOrDefault(b => b.name == name) ?? throw new InvalidOperationException("Table is not found");
+            if (cfg is null)
+                throw new KeyNotFoundException(
+                    $"Table reports not found in '{TableData}'");
+
+            return _sheetsService.ReadTable(cfg.sheetname, cfg.id, ct);
+        }
+
+        public async Task ExportReportsToTxtAsync(
+    string outputPath,
+    CancellationToken ct = default)
+        {
+            // читаем таблицу через текущий метод менеджера
+            var rows = await ReadTableAsync(ct); // твой ReadTableAsync для "reports"
+
+            var lines = new List<string>();
+
+            foreach (var row in rows)
+            {
+                // конвертация ячеек в строки; разделитель выбери сам: ;, |, таб и т.п.
+                var cells = row.Select(c => c?.ToString() ?? string.Empty);
+                var line = string.Join(";", cells);
+                lines.Add(line);
+            }
+
+            // записываем в текстовый файл
+            File.WriteAllLines(outputPath, lines, Encoding.UTF8); // создаст или перезапишет файл [web:471][web:476]
         }
     }
 
-    public class TableSheetsList
+    public class SheetConfig
     {
-        [JsonPropertyName("sheets")]
-        public required List<TableFromJson> sheets { get; set; }
+        public string id { get; set; } = default!;
+        public string name { get; set; } = default!;
+        public string sheetname { get; set; } = default!;
     }
 
-    public class TableFromJson
+    public class SheetsConfigRoot
     {
-        [JsonPropertyName("id")]
-        public required string id { get; set; }
-        [JsonPropertyName("name")]
-        public required string name { get; set; }
+        public List<SheetConfig> sheets { get; set; } = new();
     }
 }
