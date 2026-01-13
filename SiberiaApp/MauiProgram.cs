@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using SiberiaApp.Classes.ViewModels;
 
 namespace SiberiaApp
 {
@@ -20,7 +19,6 @@ namespace SiberiaApp
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-            builder.Services.AddTransient<MainMenu>();
             builder.Services.AddTransient<MainPage>();
 
             return builder.Build();

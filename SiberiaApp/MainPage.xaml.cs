@@ -1,12 +1,11 @@
-﻿using SiberiaApp.Classes.ViewModels;
-namespace SiberiaApp
+﻿namespace SiberiaApp
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()  // ✅ Параметр для DI
         {
             InitializeComponent();
-            BindingContext = new MainMenu();
+            //BindingContext = new MainMenu();
         }
     }
 }
