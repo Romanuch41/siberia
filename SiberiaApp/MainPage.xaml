@@ -1,9 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SiberiaApp.MainPage">
+             x:Class="SiberiaApp.MainPage"
+             x:Name="mainPage">
 
-    <Grid RowDefinitions="Auto,*,Auto" ColumnDefinitions="*" BackgroundColor="White">
+    <Grid RowDefinitions="Auto,*,Auto"
+          ColumnDefinitions="*"
+          BackgroundColor="White">
+        <Grid.Resources>
+            <Style x:Key="ButtonCollectionStyle" TargetType="CollectionView">
+                <Setter Property="IsVisible" Value="True"/>
+                <Style.Triggers>
+                    <DataTrigger
+                        TargetType="CollectionView"
+                        Binding="{Binding CollectionsButton.Count}"
+                        Value="0">
+                        <Setter Property="IsVisible" Value="False"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="CardsCollectionStyle" TargetType="CollectionView">
+                <Setter Property="IsVisible" Value="True"/>
+                <Style.Triggers>
+                    <DataTrigger
+            TargetType="CollectionView"
+            Binding="{Binding CollectionsCards.Count}"
+            Value="0">
+                        <Setter Property="IsVisible" Value="False"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="ButtonEffects" TargetType="Button">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="#006655" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </Grid.Resources>
 
         <!-- Шапка (1-я строка, автоматическая высота) -->
         <Border Grid.Row="0" 
@@ -23,19 +64,43 @@
         <!-- Основное тело (2-я строка, занимает оставшееся место) -->
         <ScrollView Grid.Row="1" Padding="20">
             <VerticalStackLayout Spacing="15">
-                <Label Text="{Binding MainTitle}" 
+                <Label Text="{Binding TitlePage}" 
                        FontSize="18" 
                        FontAttributes="Bold"
-                       FontFamily="roboto"/>
-                <CollectionView ItemsSource="{Binding Buttons}">
+                       FontFamily="roboto"
+                       TextColor="Black"/>
+                <CollectionView ItemsSource="{Binding CollectionsCards}" HorizontalOptions="Center" Style="{StaticResource CardsCollectionStyle}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Button Text="{Binding Title}"
-                                    BackgroundColor="{Binding BackgroundColor}"
-                                    Margin="10"
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, 
-                  Path=BindingContext.NavigateCommand}"
-        CommandParameter="{Binding CommandId}"/>
+                            <Border StrokeShape="{Binding CornerRadius}">
+                                <Grid WidthRequest="{Binding Width}"
+                                      HeightRequest="{Binding Height}"
+                                      BackgroundColor="{Binding BackgroundColor}">
+                                    <Label Text="{Binding User}" TextColor="{Binding TextColor}" FontSize="Default"/>
+                                    <Label Text="{Binding Date}" TextColor="{Binding TextColor}" FontSize="Default"/>
+                                    <Label Text="{Binding Price}" TextColor="{Binding TextColor}" FontSize="Default"/>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <CollectionView ItemsSource="{Binding CollectionsButton}" HorizontalOptions="Center" Style="{StaticResource ButtonCollectionStyle}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalOptions="Center">
+                                <Button Style="{StaticResource ButtonEffects}"
+                    Text="{Binding Title}"
+                    BackgroundColor="{Binding BackgroundColor}"
+                    WidthRequest="{Binding Width}"
+                    HeightRequest="{Binding Height}"
+                    CornerRadius="{Binding CornerRadius}"
+                    TextColor="{Binding Color}"
+                    Margin="10"
+                    Command="{Binding Source={x:Reference mainPage}, Path=BindingContext.ChangeSectionCommand}"
+                    CommandParameter="{Binding id}"
+                    HorizontalOptions="Center">
+                                </Button>
+                            </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
@@ -48,9 +113,9 @@
                 Padding="10"
                 HeightRequest="60">
             <HorizontalStackLayout Spacing="10" HorizontalOptions="CenterAndExpand">
-                <Button Text="Отчёты"  ImageSource="reports.png" FontFamily="roboto" BackgroundColor="#008676" Command="{Binding NavigateCommand}" CommandParameter="reports"/>
-                <Button Text="Предприятие" ImageSource="sklad.png" FontFamily="roboto" BackgroundColor="#008676" Command="{Binding NavigateCommand}" CommandParameter="products"/>
-                <Button Text="Главное меню" ImageSource="main_menu.png" FontFamily="roboto" BackgroundColor="#008676" Command="{Binding NavigateCommand}" CommandParameter="mainMenu"/>
+                <Button Text="Отчёты"  ImageSource="reports.png" FontFamily="roboto" BackgroundColor="#009886" TextColor="#FFFFFF" Command="{Binding Navigate}" Style="{StaticResource ButtonEffects}" CommandParameter="Reports"/>
+                <Button Text="Предприятие" ImageSource="sklad.png" FontFamily="roboto" BackgroundColor="#009886" TextColor="#FFFFFF" Command="{Binding CommandNavigate}" CommandParameter="products" Style="{StaticResource ButtonEffects}"/>
+                <Button Text="Главное меню" ImageSource="main_menu.png" FontFamily="roboto" BackgroundColor="#009886" TextColor="#FFFFFF" Command="{Binding CommandNavigate}" CommandParameter="mainMenu" Style="{StaticResource ButtonEffects}"/>
             </HorizontalStackLayout>
         </Border>
 

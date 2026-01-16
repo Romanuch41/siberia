@@ -24,10 +24,10 @@ namespace SiberiaApp.Classes
             Debug.WriteLine($"Load tables {Sheets.sheets.Count}");
         }
 
-        public Task<IList<IList<object>>> ReadTableAsync(CancellationToken ct = default)
+        public Task<IList<IList<object>>> ReadTableAsync(string nameTable, CancellationToken ct = default)
         {
             var cfg = Sheets.sheets
-            .FirstOrDefault(s => s.name.Equals("Reports", StringComparison.OrdinalIgnoreCase));
+            .FirstOrDefault(s => s.name.Equals(nameTable, StringComparison.OrdinalIgnoreCase));
 
             if (cfg is null)
                 throw new KeyNotFoundException(
@@ -37,11 +37,10 @@ namespace SiberiaApp.Classes
         }
 
         public async Task ExportReportsToTxtAsync(
-    string outputPath,
-    CancellationToken ct = default)
+    string outputPath, CancellationToken ct = default)
         {
             // читаем таблицу через текущий метод менеджера
-            var rows = await ReadTableAsync(ct); // твой ReadTableAsync для "reports"
+            var rows = await ReadTableAsync("Report", ct); // твой ReadTableAsync для "reports"
 
             var lines = new List<string>();
 
