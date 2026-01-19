@@ -53,28 +53,41 @@ namespace SiberiaApp.Classes.ViewModels
         private async void ShowReports(string commandId)
         {
             CollectionsButton.Clear();
+            CollectionsCards.Clear();
             TitlePage = "Отчеты";
-            googleDriveService = new GoogleDriveService(Path.Combine(AppContext.BaseDirectory, "json", "auth", "service.json"));
-            googleSheetsService = new GoogleSheetsService(Path.Combine(AppContext.BaseDirectory, "json", "auth", "service.json"));
-            tableManager = new TableManager(googleSheetsService);
+            using var googleDriveStream = await FileSystem.OpenAppPackageFileAsync("service.json");
+            using var googleSheetsStream = await FileSystem.OpenAppPackageFileAsync("service.json");
+            using var tableStream = await FileSystem.OpenAppPackageFileAsync("tablecontent.json");
+            googleDriveService = new GoogleDriveService(googleDriveStream);
+            googleSheetsService = new GoogleSheetsService(googleSheetsStream);
+            tableManager = new TableManager(googleSheetsService, tableStream);
             var table = await tableManager.ReadTableAsync(commandId);
             Debug.WriteLine("Получил таблицу");
-            List<(object, object, object)> result = new List<(object, object, object)> ();
-            CardDataModel[] dataCards = new CardDataModel[30];
-            for (int i = 0; i < 30; i++)
+            for (int i = 1; i < 31; i++)
             {
                 var row = table[i];
                 if (row.Count < 4)
                     continue;
 
-                dataCards[i] = new CardDataModel
+                CardDataModel dataCards = new CardDataModel
                 (
                     row[1]?.ToString() ?? "not data",
                     row[2]?.ToString() ?? "not data",
                     row[3]?.ToString() ?? "not data"
                 );
-                CollectionsCards.Add(new CardViuweModel(dataCards[i]));
+                CollectionsCards.Add(new CardViuweModel(dataCards));
             }
+        }
+
+        private void ShowMainMenu()
+        {
+            TitlePage = "Главное меню";
+            CollectionsButton.Clear();
+            CollectionsCards.Clear();
+            CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Раздел заказов", MainButtonId.Orders));
+            CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Заказы в производство", MainButtonId.CreateForOrders));
+            CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Журналы", MainButtonId.Jornals));
+            CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Номенклатура", MainButtonId.DataProducts));
         }
 
         private void CommandNavigate(string key)
@@ -84,6 +97,10 @@ namespace SiberiaApp.Classes.ViewModels
                 case "Reports":
                     Debug.WriteLine("Получена команда с кнопки отчеты");
                     ShowReports(key);
+                    break;
+                case "MainMenu":
+                    Debug.WriteLine("Получена команда перехода на главное меню");
+                    ShowMainMenu();
                     break;
             }
         }

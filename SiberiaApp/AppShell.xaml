@@ -7,11 +7,13 @@
     Title="SiberiaApp"
     FlyoutBehavior="Flyout">
 
-    <FlyoutItem Icon="main_menu.png" Title="Главное меню" Route="main">
+    <!--<ShellContent Title="Авторизация" ContentTemplate="{DataTemplate local:Authorization}" Route="authorization"/>-->
+
+    <FlyoutItem Icon="main_menu.png" Title="Главное меню" Route="mainPage">
         <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Настройки">
+    <FlyoutItem Title="Настройки" Route="mainPage">
         <ShellContent
-            Title="Настройки"/>
+            Title="Настройки" ContentTemplate="{DataTemplate local:MainPage}"/>
     </FlyoutItem>
 </Shell>

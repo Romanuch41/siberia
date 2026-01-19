@@ -19,6 +19,7 @@ namespace SiberiaApp
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            builder.Services.AddTransient<Authorization>();
             builder.Services.AddTransient<MainPage>();
 
             return builder.Build();

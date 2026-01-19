@@ -11,14 +11,15 @@ namespace SiberiaApp.Classes
     public class TableManager
     {
         private readonly GoogleSheetsService _sheetsService;
-        private string TableData = Path.Combine(AppContext.BaseDirectory, "json", "tablecontent.json");
         private SheetsConfigRoot Sheets;
+        Stream File;
 
-        public TableManager(GoogleSheetsService sheetsService)
+        public TableManager(GoogleSheetsService sheetsService, Stream file)
         {
             _sheetsService = sheetsService;
-
-            var json = File.ReadAllText(TableData);
+            File = file;
+            using var reader = new StreamReader(File);
+            var json = reader.ReadToEnd();
             Sheets = JsonSerializer.Deserialize<SheetsConfigRoot>(json) ?? new SheetsConfigRoot();
 
             Debug.WriteLine($"Load tables {Sheets.sheets.Count}");
@@ -31,30 +32,10 @@ namespace SiberiaApp.Classes
 
             if (cfg is null)
                 throw new KeyNotFoundException(
-                    $"Table reports not found in '{TableData}'");
+                    $"Table reports not found in '{File.Position}'");
 
             Debug.WriteLine("загружаю таблицу");
             return await _sheetsService.ReadTable(cfg.sheetname, cfg.id, ct);
-        }
-
-        public async Task ExportReportsToTxtAsync(
-    string outputPath, CancellationToken ct = default)
-        {
-            // читаем таблицу через текущий метод менеджера
-            var rows = await ReadTableAsync("Report", ct); // твой ReadTableAsync для "reports"
-
-            var lines = new List<string>();
-
-            foreach (var row in rows)
-            {
-                // конвертация ячеек в строки; разделитель выбери сам: ;, |, таб и т.п.
-                var cells = row.Select(c => c?.ToString() ?? string.Empty);
-                var line = string.Join(";", cells);
-                lines.Add(line);
-            }
-
-            // записываем в текстовый файл
-            File.WriteAllLines(outputPath, lines, Encoding.UTF8); // создаст или перезапишет файл [web:471][web:476]
         }
     }
 

@@ -128,7 +128,7 @@
             <HorizontalStackLayout Spacing="10" HorizontalOptions="CenterAndExpand">
                 <Button Text="Отчёты"  ImageSource="reports.png" FontFamily="roboto" BackgroundColor="#009886" TextColor="#FFFFFF" Command="{Binding Navigate}" Style="{StaticResource ButtonEffects}" CommandParameter="Reports"/>
                 <Button Text="Предприятие" ImageSource="sklad.png" FontFamily="roboto" BackgroundColor="#009886" TextColor="#FFFFFF" Command="{Binding CommandNavigate}" CommandParameter="products" Style="{StaticResource ButtonEffects}"/>
-                <Button Text="Главное меню" ImageSource="main_menu.png" FontFamily="roboto" BackgroundColor="#009886" TextColor="#FFFFFF" Command="{Binding CommandNavigate}" CommandParameter="mainMenu" Style="{StaticResource ButtonEffects}"/>
+                <Button Text="Главное меню" ImageSource="main_menu.png" FontFamily="roboto" BackgroundColor="#009886" TextColor="#FFFFFF" Command="{Binding Navigate}" CommandParameter="MainMenu" Style="{StaticResource ButtonEffects}"/>
             </HorizontalStackLayout>
         </Border>
 

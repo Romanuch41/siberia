@@ -15,11 +15,10 @@ namespace SiberiaApp.Classes
     {
         private readonly SheetsService _sheets;
 
-        public GoogleSheetsService(string serviceAccountJsonPath, string applicationName = "SiberiaApp")
+        public GoogleSheetsService(Stream serviceAccountJsonPath, string applicationName = "SiberiaApp")
         {
-            using var stream = new FileStream(serviceAccountJsonPath, FileMode.Open, FileAccess.Read);
             var credential = GoogleCredential
-                .FromStream(stream)
+                .FromStream(serviceAccountJsonPath)
                 .CreateScoped(SheetsService.Scope.Spreadsheets);
 
             _sheets = new SheetsService(new BaseClientService.Initializer

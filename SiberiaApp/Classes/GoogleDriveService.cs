@@ -17,11 +17,10 @@ namespace SiberiaApp.Classes
         private readonly string FileName = "API.txt";
         private readonly string FoldeId = "1xFn1nZhwBhbuSmQso7inattk9E-LcOQM";
 
-        public GoogleDriveService(string ServiceAccountJsonPath, string ApplicationName = "SiberiaApp")
+        public GoogleDriveService(Stream ServiceAccountJsonPath, string ApplicationName = "SiberiaApp")
         {
-            using var stream = new FileStream(ServiceAccountJsonPath, FileMode.Open, FileAccess.Read);
             var credential = GoogleCredential
-                .FromStream(stream)
+                .FromStream(ServiceAccountJsonPath)
                 .CreateScoped(DriveService.ScopeConstants.Drive);
             _drive = new DriveService(new BaseClientService.Initializer
             {

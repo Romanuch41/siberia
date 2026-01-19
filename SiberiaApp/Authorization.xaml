@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SiberiaApp.Authorization"
+             x:Name="authorization">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
+    <VerticalStackLayout VerticalOptions="Center">
+        <Grid RowDefinitions="3*, 3*, 3*, 3*"
+              ColumnDefinitions="1*, 8*, 1*"
+              RowSpacing="10">
+            <Label Grid.Row="0" Grid.Column="1"
+                Text="Вход"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontSize="24"
+                FontFamily="roboto"/>
+            <Border Grid.Row="1" Grid.Column="1"
+                WidthRequest="180"
+                    HeightRequest="40">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="7"/>
+                </Border.StrokeShape>
+                <Entry x:Name="UserLogin" Placeholder="Телефон" Keyboard="Numeric"/>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1"
+                WidthRequest="180"
+                    HeightRequest="40"
+                    Margin="20"
+                    IsVisible="False"
+                    IsEnabled="False">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="7"/>
+                </Border.StrokeShape>
+                <Entry x:Name="SicretCode" Placeholder="Ваш код из Telegram" Keyboard="Numeric" FontFamily="roboto"/>
+            </Border>
+            <Button x:Name="InputPhone" Grid.Row="3" Grid.Column="1" 
+                    WidthRequest="80"
+                    HeightRequest="40"
+                    Text="Отправить код"
+                    FontFamily="roboto"
+                    BackgroundColor="#009886"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
