@@ -50,16 +50,18 @@ namespace SiberiaApp.Classes.ViewModels
             CurrentSelection = id;
         }
 
-        private void ShowReports(string commandId)
+        private async void ShowReports(string commandId)
         {
             CollectionsButton.Clear();
-            googleDriveService = new GoogleDriveService(Path.Combine(AppContext.BaseDirectory, "json", "auth", "client.json"));
-            googleSheetsService = new GoogleSheetsService(Path.Combine(AppContext.BaseDirectory, "json", "auth", "client.json"));
+            TitlePage = "Отчеты";
+            googleDriveService = new GoogleDriveService(Path.Combine(AppContext.BaseDirectory, "json", "auth", "service.json"));
+            googleSheetsService = new GoogleSheetsService(Path.Combine(AppContext.BaseDirectory, "json", "auth", "service.json"));
             tableManager = new TableManager(googleSheetsService);
-            var table = tableManager.ReadTableAsync(commandId).Result;
+            var table = await tableManager.ReadTableAsync(commandId);
+            Debug.WriteLine("Получил таблицу");
             List<(object, object, object)> result = new List<(object, object, object)> ();
-            CardDataModel[] dataCards = new CardDataModel[table.Count];
-            for (int i = 0; i < table.Count; i++)
+            CardDataModel[] dataCards = new CardDataModel[30];
+            for (int i = 0; i < 30; i++)
             {
                 var row = table[i];
                 if (row.Count < 4)

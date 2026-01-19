@@ -70,15 +70,28 @@
                        FontFamily="roboto"
                        TextColor="Black"/>
                 <CollectionView ItemsSource="{Binding CollectionsCards}" HorizontalOptions="Center" Style="{StaticResource CardsCollectionStyle}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="10"/>
+                    </CollectionView.ItemsLayout>
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Border StrokeShape="{Binding CornerRadius}">
+                            <Border WidthRequest="{Binding Width}"
+                                    HeightRequest="{Binding Height}"
+                                    BackgroundColor="Red">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="{Binding cornerRadius}"/>
+                                </Border.StrokeShape>
                                 <Grid WidthRequest="{Binding Width}"
                                       HeightRequest="{Binding Height}"
-                                      BackgroundColor="{Binding BackgroundColor}">
-                                    <Label Text="{Binding User}" TextColor="{Binding TextColor}" FontSize="Default"/>
-                                    <Label Text="{Binding Date}" TextColor="{Binding TextColor}" FontSize="Default"/>
-                                    <Label Text="{Binding Price}" TextColor="{Binding TextColor}" FontSize="Default"/>
+                                      BackgroundColor="{Binding BackgroundColor}"
+                                      RowDefinitions="Auto, *"
+                                      ColumnDefinitions="*, *"
+                                      Padding="10"
+                                      RowSpacing="25">
+                                    <Label Grid.Row="{Binding RowUser}" Grid.Column="{Binding ColUser}" Text="{Binding User}" TextColor="{Binding TextColor}" FontSize="Default"/>
+                                    <Label Grid.Row="{Binding RowDate}" Grid.Column="{Binding ColDate}" Text="{Binding Date}" TextColor="{Binding TextColor}" FontSize="Default"/>
+                                    <Label Grid.Row="{Binding RowPrice}" Grid.Column="{Binding ColPrice}" Text="{Binding Price}" TextColor="{Binding TextColor}" FontSize="Default"/>
                                 </Grid>
                             </Border>
                         </DataTemplate>

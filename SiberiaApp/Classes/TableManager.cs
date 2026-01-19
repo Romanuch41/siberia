@@ -24,7 +24,7 @@ namespace SiberiaApp.Classes
             Debug.WriteLine($"Load tables {Sheets.sheets.Count}");
         }
 
-        public Task<IList<IList<object>>> ReadTableAsync(string nameTable, CancellationToken ct = default)
+        public async Task<IList<IList<object>>> ReadTableAsync(string nameTable, CancellationToken ct = default)
         {
             var cfg = Sheets.sheets
             .FirstOrDefault(s => s.name.Equals(nameTable, StringComparison.OrdinalIgnoreCase));
@@ -33,7 +33,8 @@ namespace SiberiaApp.Classes
                 throw new KeyNotFoundException(
                     $"Table reports not found in '{TableData}'");
 
-            return _sheetsService.ReadTable(cfg.sheetname, cfg.id, ct);
+            Debug.WriteLine("загружаю таблицу");
+            return await _sheetsService.ReadTable(cfg.sheetname, cfg.id, ct);
         }
 
         public async Task ExportReportsToTxtAsync(

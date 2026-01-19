@@ -15,20 +15,32 @@ namespace SiberiaApp.Classes.ViewModels
         public string User {  get; set; }
         public string Price { get; set; }
         public string Date { get; set; }
-        public CornerRadius cornerRadius { get; set; }
+        public double cornerRadius { get; set; }
         public string BackgroundColor { get; set; }
         public string TextColor { get; set; }
+        public int RowUser { get; set; }
+        public int ColUser { get; set; }
+        public int RowDate { get; set; }
+        public int ColDate { get; set; }
+        public int RowPrice { get; set; }
+        public int ColPrice { get; set; }
 
         public CardViuweModel(CardDataModel dataCard)
         {
-            Width = 220;
-            Height = 30;
+            Width = 250;
+            Height = 120;
             User = dataCard.user;
             Price = dataCard.price;
             Date = dataCard.date;
-            cornerRadius = new CornerRadius(7);
-            BackgroundColor = "#E2E2E2";
-            TextColor = "#000000";
+            cornerRadius = 7;
+            BackgroundColor = "#009886";
+            TextColor = "#FFFFFF";
+            RowUser = 0;
+            ColUser = 0;
+            RowDate = 1;
+            ColDate = 0;
+            RowPrice = 1;
+            ColPrice = 1;
         }
     }
 }
