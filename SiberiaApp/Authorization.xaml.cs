@@ -1,67 +1,110 @@
 using CommunityToolkit.Mvvm.Input;
 using System.Windows.Input;
 using System.Text.RegularExpressions;
-using Android.App.Usage;
+//using Android.App.Usage;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using SiberiaApp.Classes;
-using SiberiaApp;
+using System.Diagnostics;
 
 namespace SiberiaApp;
 
 public partial class Authorization : ContentPage
 {
-	ICommand auth;
-	int code;
+	private int code;
 	public Authorization()
 	{
 		InitializeComponent();
-		auth = new RelayCommand<string>(AuthUser);
-
+        BindingContext = this;
     }
 
 	public async void SendCodeTelegram()
 	{
-		if (!string.IsNullOrEmpty(UserLogin.Text) && Regex.IsMatch(UserLogin.Text, @"^\+\d{11}$") )
+		if (!string.IsNullOrEmpty(UserLogin.Text) || Regex.IsMatch(UserLogin.Text, @"^\+\d{11}$"))
 		{
-			var rnd = new Random();
-			code = rnd.Next((int)Math.Pow(10, 4 - 1), (int)Math.Pow(10, 4) - 1);
+			GoogleDriveService driveservice = new GoogleDriveService(await FileSystem.OpenAppPackageFileAsync("service.json"));
+			GoogleSheetsService sheetservice = new GoogleSheetsService(await FileSystem.OpenAppPackageFileAsync("service.json"));
+			TableManager tableservice = new TableManager(sheetservice, await FileSystem.OpenAppPackageFileAsync("tablecontent.json"));
+			Debug.WriteLine("Созданы объекты для API");
 
+			var table = await tableservice.ReadTableAsync("Users");
+			Debug.WriteLine("Получены данне пользователей");
 
-			TelegramResponse response = new TelegramResponse();
-			TelegramRquest request = new TelegramRquest();
-			TelegramService telegramservice = new TelegramService(request, response);
-			var result = await telegramservice.SendVerificationCode(UserLogin.Text, code.ToString());
-			if (result.success)
+			string[] phones = table.Select(row => row.Count >= 4 ? row[3]?.ToString() ?? "not data": "not data").ToArray();
+			string[] chats = table.Select(row => row.Count >= 5 ? row[4]?.ToString() ?? "not data": "not data").ToArray();
+
+            Debug.WriteLine(phones.ToString());
+			string match = UserLogin.Text.Remove(0, 2);
+			match = "8" + match;
+
+			if (Array.Exists(phones, x => x == match))
 			{
-				SicretCode.IsVisible = true;
-                SicretCode.IsEnabled = true;
-				InputPhone.Text = "Ok";
-				InputPhone.CommandParameter = "CheckCode";
-            }
-        }
+				string chat_id = chats[Array.IndexOf(phones, match)];
+
+				var rnd = new Random();
+				code = rnd.Next(1000, 10000);
+
+				TelegramService telegramservice = new TelegramService(new TelegramRquest(), new TelegramResponse());
+				var result = await telegramservice.SendVerificationCode(chat_id, code.ToString());
+				if (result.success)
+				{
+					BorderSicretCode.IsVisible = true;
+					BorderSicretCode.IsEnabled = true;
+					InputPhone.Text = "Ok";
+					InputPhone.CommandParameter = "CheckCode";
+				}
+				else
+					await DisplayAlert("Ошибка", "Не удалось отправить код", "Ок");
+			}
+			else
+				await DisplayAlert("Ошибка", "Пользователь не найден\nОбратитесь к администратору", "Ок");
+		}
+		else
+			await DisplayAlert("Внимание", "Номер телефона введен не корректно", "Ок");
 	}
 
-	public void CheckCode()
+	public async Task OpenTelegramBotAsync()
+	{
+        const string botUsername = "wild_Siberia_bot";
+
+        var uri = new Uri($"https://t.me/{botUsername}");
+
+        await Launcher.OpenAsync(uri);
+    }
+
+	public async void CheckCode()
 	{
 		if (code.ToString() == SicretCode.Text)
 		{
-
+            (Application.Current.MainPage as AppShell)?.ShowMainFlyOut();
+			await Shell.Current.GoToAsync("//mainPage");
         }
 	}
 
-    public void AuthUser(string key)
+    private void AuthUser(object sender, EventArgs e)
 	{
-		switch(key)
+		switch(InputPhone.CommandParameter)
 		{
 			case "telegram":
+				Debug.WriteLine("Получена команда на отправку кода");
 				SendCodeTelegram();
 				break;
 			case "CheckCode":
+				Debug.WriteLine("Получена команда на проверку кода");
 				CheckCode();
 				break;
-        }
+		}
 	}
+
+    private void UserLogin_Focused(object sender, FocusEventArgs e)
+    {
+        if (sender is Entry entry)
+        {
+            // Переместить курсор в конец текста
+            entry.CursorPosition = entry.Text?.Length ?? 0;
+            entry.SelectionLength = 0;
+        }
+    }
 }

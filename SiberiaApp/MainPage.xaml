@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SiberiaApp.MainPage"
              x:Name="mainPage">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False"/>
+    </Shell.BackButtonBehavior>
 
     <Grid RowDefinitions="Auto,*,Auto"
           ColumnDefinitions="*"
@@ -119,6 +122,22 @@
                 </CollectionView>
             </VerticalStackLayout>
         </ScrollView>
+        
+        <Grid HorizontalOptions="End" Grid.Row="1">
+            <Button Style="{StaticResource ButtonEffects}"
+            Text="{Binding AddButton.Title}"
+            BackgroundColor="{Binding AddButton.BackgroundColor}"
+            WidthRequest="{Binding AddButton.Width}"
+            HeightRequest="{Binding AddButton.Height}"
+            CornerRadius="{Binding AddButton.CornerRadius}"
+            TextColor="{Binding AddButton.Color}"
+            Margin="10"
+            Command="{Binding ChangeSectionCommand}"
+            CommandParameter="{Binding AddButton.id}"
+            HorizontalOptions="End"
+            VerticalOptions="End">
+            </Button>
+        </Grid>
 
         <!-- Горячие клавиши (3-я строка, фиксированная высота) -->
         <Border Grid.Row="2"

@@ -10,6 +10,22 @@
         <Grid RowDefinitions="3*, 3*, 3*, 3*"
               ColumnDefinitions="1*, 8*, 1*"
               RowSpacing="10">
+            <Grid.Resources>
+                <Style x:Key="ButtonEffects" TargetType="Button">
+                    <Setter Property="VisualStateManager.VisualStateGroups">
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Pressed">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="#006655" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
             <Label Grid.Row="0" Grid.Column="1"
                 Text="Вход"
                 VerticalOptions="Center" 
@@ -22,9 +38,9 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="7"/>
                 </Border.StrokeShape>
-                <Entry x:Name="UserLogin" Placeholder="Телефон" Keyboard="Numeric"/>
+                <Entry x:Name="UserLogin" Placeholder="Телефон" Keyboard="Numeric" FontFamily="roboto" Text="+7" Focused="UserLogin_Focused"/>
             </Border>
-            <Border Grid.Row="2" Grid.Column="1"
+            <Border Grid.Row="2" Grid.Column="1" x:Name="BorderSicretCode"
                 WidthRequest="180"
                     HeightRequest="40"
                     Margin="20"
@@ -36,11 +52,14 @@
                 <Entry x:Name="SicretCode" Placeholder="Ваш код из Telegram" Keyboard="Numeric" FontFamily="roboto"/>
             </Border>
             <Button x:Name="InputPhone" Grid.Row="3" Grid.Column="1" 
-                    WidthRequest="80"
+                    WidthRequest="150"
                     HeightRequest="40"
                     Text="Отправить код"
                     FontFamily="roboto"
-                    BackgroundColor="#009886"/>
+                    BackgroundColor="#009886"
+                    CommandParameter="telegram"
+                    Clicked="AuthUser"
+                    Style="{StaticResource ButtonEffects}"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

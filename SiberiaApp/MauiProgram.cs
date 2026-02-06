@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using SiberiaApp.Classes.ViewModels;
 
 namespace SiberiaApp
 {
@@ -21,6 +22,7 @@ namespace SiberiaApp
 #endif
             builder.Services.AddTransient<Authorization>();
             builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<MainMenuViewModels>();
 
             return builder.Build();
         }

@@ -1,4 +1,4 @@
-﻿using Javax.Security.Auth;
+﻿//using Javax.Security.Auth;
 
 namespace SiberiaApp
 {
@@ -16,7 +16,12 @@ namespace SiberiaApp
         private async void OnShellFirstNavigate(object sender, EventArgs e)
         {
             Navigated -= OnShellFirstNavigate;
-            await Navigation.PushAsync(new Authorization());
+            await Shell.Current.GoToAsync("//authorization");
+        }
+
+        public void ShowMainFlyOut()
+        {
+            FlyoutBehavior = FlyoutBehavior.Flyout;
         }
     }
 }
