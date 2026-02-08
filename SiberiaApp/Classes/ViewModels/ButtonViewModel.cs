@@ -13,7 +13,8 @@ namespace SiberiaApp.Classes.ViewModels
         CreateForOrders,
         Jornals,
         DataProducts,
-        MainMenu
+        MainMenu,
+        AddReport
     }
     public class ButtonViewModel
     {
@@ -42,6 +43,9 @@ namespace SiberiaApp.Classes.ViewModels
             return new ButtonViewModel(190, 30, 5, "#009886", "#FFFFFF", title, id);
         }
 
-
+        public static ButtonViewModel ButtonAddReport(string title, MainButtonId id)
+        {
+            return new ButtonViewModel(60, 60, 30, "#009886", "#FFFFFF", title, id);
+        }
     }
 }

@@ -16,7 +16,10 @@ namespace SiberiaApp.Classes.ViewModels
     {
         public ObservableCollection<ButtonViewModel> CollectionsButton { get; set; }
         public ObservableCollection<CardViuweModel> CollectionsCards { get; set; }
-        public string TitlePage { get; set; }
+        [ObservableProperty]
+        private ButtonViewModel addButton;
+        [ObservableProperty]
+        private string titlePage;
         public ICommand ChangeSectionCommand { get; set; }
         [ObservableProperty]
         private MainButtonId currentSelection;
@@ -30,7 +33,7 @@ namespace SiberiaApp.Classes.ViewModels
         public MainMenuViewModels()
         {
             currentSelection = MainButtonId.MainMenu;
-            TitlePage = "Главное меню";
+            titlePage = "Главное меню";
 
             Debug.WriteLine($"Title = {TitlePage} Debug.WriteLine");
             ChangeSectionCommand = new RelayCommand<MainButtonId>(OnChangeSelection);
@@ -50,17 +53,18 @@ namespace SiberiaApp.Classes.ViewModels
             CurrentSelection = id;
         }
 
-        private async void ShowReports(string commandId)
+        private async Task ShowReports(string commandId)
         {
             CollectionsButton.Clear();
             CollectionsCards.Clear();
             TitlePage = "Отчеты";
+            AddButton = ButtonViewModel.ButtonAddReport("+", MainButtonId.AddReport);
             using var googleDriveStream = await FileSystem.OpenAppPackageFileAsync("service.json");
             using var googleSheetsStream = await FileSystem.OpenAppPackageFileAsync("service.json");
             using var tableStream = await FileSystem.OpenAppPackageFileAsync("tablecontent.json");
-            googleDriveService = new GoogleDriveService(googleDriveStream);
-            googleSheetsService = new GoogleSheetsService(googleSheetsStream);
-            tableManager = new TableManager(googleSheetsService, tableStream);
+            googleDriveService ??= new GoogleDriveService(googleDriveStream);
+            googleSheetsService ??= new GoogleSheetsService(googleSheetsStream);
+            tableManager ??= new TableManager(googleSheetsService, tableStream);
             var table = await tableManager.ReadTableAsync(commandId);
             Debug.WriteLine("Получил таблицу");
             for (int i = 1; i < 31; i++)
@@ -82,12 +86,18 @@ namespace SiberiaApp.Classes.ViewModels
         private void ShowMainMenu()
         {
             TitlePage = "Главное меню";
+            AddButton = null;
             CollectionsButton.Clear();
             CollectionsCards.Clear();
             CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Раздел заказов", MainButtonId.Orders));
             CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Заказы в производство", MainButtonId.CreateForOrders));
             CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Журналы", MainButtonId.Jornals));
             CollectionsButton.Add(ButtonViewModel.ButtonMainMenu("Номенклатура", MainButtonId.DataProducts));
+        }
+
+        private async Task AddReport()
+        {
+
         }
 
         private void CommandNavigate(string key)
