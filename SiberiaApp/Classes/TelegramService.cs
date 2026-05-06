@@ -7,6 +7,8 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
+// TelegramService подготовлен для авторизации пользователей в будеющем будет ещё использоваться для оповещений
+
 namespace SiberiaApp.Classes
 {
     public class TelegramService

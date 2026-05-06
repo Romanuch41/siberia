@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//User будет использоваться для работы с данными пользователей
+
 namespace SiberiaApp.Classes
 {
     public class User
