@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\viewmodels\\mainmenuviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\viewmodels\\inputwindiw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\viewmodels\\inputwindiw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\viewmodels\\cardviuwemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\viewmodels\\cardviuwemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\viewmodels\\buttonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\datamodel\\carddatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\datamodel\\carddatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\telegramservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,12 +39,12 @@
       "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\forms\\reportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\forms\\reportsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\json\\tablecontent.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\json\\tablecontent.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\json\\secret.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\json\\secret.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\authorization.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\classes\\datamodel\\carddatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\classes\\datamodel\\carddatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,6 +81,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|g:\\projects\\siberia\\siberaapp\\siberiaapp\\siberiaapp\\globalxmlns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E5ABAA5-09C7-471F-A754-D3A1E87F4204}|SiberiaApp\\SiberiaApp.csproj|solutionrelative:siberiaapp\\globalxmlns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\test.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SiberiaApp\\json\\test.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\tablecontent.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SiberiaApp\\json\\tablecontent.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\Forms\\ReportsForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SiberiaApp\\Classes\\Forms\\ReportsForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 459,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -107,19 +115,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "GoogleSheetsService.cs",
-              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\GoogleSheetsService.cs",
-              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\GoogleSheetsService.cs",
-              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\GoogleSheetsService.cs",
-              "RelativeToolTip": "SiberiaApp\\Classes\\GoogleSheetsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T01:21:21.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "GoogleDriveService.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\GoogleDriveService.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\Classes\\GoogleDriveService.cs",
@@ -133,6 +128,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "GoogleSheetsService.cs",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\GoogleSheetsService.cs",
+              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\GoogleSheetsService.cs",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\GoogleSheetsService.cs",
+              "RelativeToolTip": "SiberiaApp\\Classes\\GoogleSheetsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T01:21:21.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TableManager.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\TableManager.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\Classes\\TableManager.cs",
@@ -145,67 +153,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "TelegramService.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\TelegramService.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\Classes\\TelegramService.cs",
               "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\TelegramService.cs",
               "RelativeToolTip": "SiberiaApp\\Classes\\TelegramService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAkwEgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwEwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T08:08:49.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\User.cs",
-              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\User.cs",
-              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\User.cs",
-              "RelativeToolTip": "SiberiaApp\\Classes\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T06:55:55.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ButtonViewModel.cs",
-              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
-              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
-              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
-              "RelativeToolTip": "SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAmwDMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T03:56:10.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CardViuweModel.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\CardViuweModel.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\Classes\\ViewModels\\CardViuweModel.cs",
               "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\CardViuweModel.cs",
               "RelativeToolTip": "SiberiaApp\\Classes\\ViewModels\\CardViuweModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA0wC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA1wC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T05:21:39.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InputWindiw.cs",
-              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
-              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
-              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
-              "RelativeToolTip": "SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CardDataModel.cs",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
+              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
+              "RelativeToolTip": "SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T18:40:57.885Z",
+              "WhenOpened": "2026-01-23T05:23:47.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ButtonViewModel.cs",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
+              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
+              "RelativeToolTip": "SiberiaApp\\Classes\\ViewModels\\ButtonViewModel.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T03:56:10.725Z",
               "EditorCaption": ""
             },
             {
@@ -216,14 +211,87 @@
               "RelativeDocumentMoniker": "SiberiaApp\\Classes\\ViewModels\\MainMenuViewModels.cs",
               "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\MainMenuViewModels.cs",
               "RelativeToolTip": "SiberiaApp\\Classes\\ViewModels\\MainMenuViewModels.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwGgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAkwHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-15T06:47:07.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "SiberiaApp\\MainPage.xaml",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\MainPage.xaml",
+              "RelativeToolTip": "SiberiaApp\\MainPage.xaml",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAQwJwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-15T06:54:33.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "InputWindiw.cs",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
+              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
+              "RelativeToolTip": "SiberiaApp\\Classes\\ViewModels\\InputWindiw.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T18:40:57.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\User.cs",
+              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\User.cs",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\User.cs",
+              "RelativeToolTip": "SiberiaApp\\Classes\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T06:55:55.142Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "secret.json",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\secret.json",
+              "RelativeDocumentMoniker": "SiberiaApp\\json\\secret.json",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\secret.json",
+              "RelativeToolTip": "SiberiaApp\\json\\secret.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-04T01:51:10.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "test.txt",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\test.txt",
+              "RelativeDocumentMoniker": "SiberiaApp\\json\\test.txt",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\test.txt",
+              "RelativeToolTip": "SiberiaApp\\json\\test.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-05-04T01:51:14.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "tablecontent.json",
+              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\tablecontent.json",
+              "RelativeDocumentMoniker": "SiberiaApp\\json\\tablecontent.json",
+              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\tablecontent.json",
+              "RelativeToolTip": "SiberiaApp\\json\\tablecontent.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-23T03:09:49.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "ReportsForm.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\Forms\\ReportsForm.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\Classes\\Forms\\ReportsForm.cs",
@@ -231,12 +299,11 @@
               "RelativeToolTip": "SiberiaApp\\Classes\\Forms\\ReportsForm.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAWwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T18:37:43.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-16T18:37:43.799Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "Authorization.xaml",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Authorization.xaml",
               "RelativeDocumentMoniker": "SiberiaApp\\Authorization.xaml",
@@ -249,30 +316,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "tablecontent.json",
-              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\tablecontent.json",
-              "RelativeDocumentMoniker": "SiberiaApp\\json\\tablecontent.json",
-              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\json\\tablecontent.json",
-              "RelativeToolTip": "SiberiaApp\\json\\tablecontent.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-23T03:09:49.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CardDataModel.cs",
-              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
-              "RelativeDocumentMoniker": "SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
-              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
-              "RelativeToolTip": "SiberiaApp\\Classes\\DataModel\\CardDataModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T05:23:47.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Authorization.xaml.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\Authorization.xaml.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\Authorization.xaml.cs",
@@ -284,20 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\MainPage.xaml",
-              "RelativeDocumentMoniker": "SiberiaApp\\MainPage.xaml",
-              "ToolTip": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\MainPage.xaml",
-              "RelativeToolTip": "SiberiaApp\\MainPage.xaml",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAQwIwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-15T06:54:33.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "AppShell.xaml.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\AppShell.xaml.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\AppShell.xaml.cs",
@@ -309,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\MainPage.xaml.cs",
@@ -321,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\AppShell.xaml",
               "RelativeDocumentMoniker": "SiberiaApp\\AppShell.xaml",
@@ -333,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\MauiProgram.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\MauiProgram.cs",
@@ -345,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "App.xaml",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\App.xaml",
               "RelativeDocumentMoniker": "SiberiaApp\\App.xaml",
@@ -357,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\App.xaml.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\App.xaml.cs",
@@ -369,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "GlobalXmlns.cs",
               "DocumentMoniker": "G:\\projects\\siberia\\SiberaApp\\SiberiaApp\\SiberiaApp\\GlobalXmlns.cs",
               "RelativeDocumentMoniker": "SiberiaApp\\GlobalXmlns.cs",

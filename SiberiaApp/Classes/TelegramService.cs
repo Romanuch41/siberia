@@ -8,6 +8,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 
 // TelegramService подготовлен для авторизации пользователей в будеющем будет ещё использоваться для оповещений
+// нужно обязательно убрать токен из кода, исопльзовать REST API и реализовать отправку сообщений через API с google apps script
 
 namespace SiberiaApp.Classes
 {
