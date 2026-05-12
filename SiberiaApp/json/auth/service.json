@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bubbly-benefit-448908-i8",
+  "private_key_id": "396623001512a7f91c0dff2239c24792a1201490",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDIXg66eMGMDEhk\nHc7/9QLVkQ2lcCTikSW7MPVzmSYeNBv1J2IKJ/v7Qo613Y0s4h7DN5y13aGciPZB\nzHpzpUmxELE2cVB0yBs/nJm66kzyiu+wirgf4fThTOPrSx1OcD7vfcmacUrreEej\ncffXQ7EJZPJNDnV5XZxCTSdTCBV/tjyzpLJFxL9i7BUpkw7gmHDkHmuag6T8bQZV\nk7W7Rfl4ecuSWAlyLJhFs8O5d0seg23/n4bkmuZqKK8gWhHM6BV44AY6qKPlR+0s\nicU5IHv+ANNiUhh9n6u+GaiIpAkwsuqe3tC37IZ5NmBn+RzYl2MlXvX8gbJKPwWz\nuRrcVXe/AgMBAAECggEAY7QmKRU43nsoNKV+oXBmsiZFf5rvx8xJVb41jYnaZXIx\nrUqlJv+hjHSgtg/ilcCJZUQRl5ALQO0IeVKKZmyL4G+5dyloy0vd/0fqWZAIrTKE\ntjk5CShzpf8QdT/B/AuvzZWu0crpaIXIRCVMmlIlUNLqHX0B6NwziuyAknk11X/U\nMdyJ/U15B5q7VcLS0Bld8ccKldmr1Ru9Wjtsa7tECe7CrSZm/U4qvMBuD4GJhu+A\nDUI63gk+T9pt3nz42D4HoBU3cHiWpeKah7Eb3HPzeLJow/bwqKIgNsMskWNgNsl0\nj30aDemviye5QDpQdBFAG5BCTLogxHl75TkI8U8JZQKBgQDvdP5liY5n5V+dfRcw\n/bFH3yBtUxAbFBcHDfQKj+xPg+C6WMAwJ4xZR1c7pDAlE4rcpjeemi0pWhl12WGz\nFaMTZK9jiQ0Mn4F/8emzBvR6bTIcasjrAyHCIxrz+PpzcjDPMTWqjvbv0JjaY0Tn\nU6bOFPcIpGEHtLRJms+XjhRP7QKBgQDWNbrtQMmCw006eaxtHCvR4Sk2ZUd+sRBG\nHEgf06wXMcNAla1HNpt1DZ7ajDtkmoQE4CMS4PeS5E4+4v5zfDwUbWYF7I6cKc66\njJH73b8ookdQfn/HvfTUTi0Bgp7ASzTLNLAqp2y7auCBGcnboESWbHC4XmJ2Che7\nwBMIvbZ42wKBgQDbwYHqy2fen5m1XeSXuGsnK3WF/1Hrl+9eMQcDXnwfqUbnnaWb\nS+A42wkKmi75B8tLnluy+YlyxtZQ2lQYV0YW+TMg5NkN+aCOPAQeocZiSK5ReAq1\n62Ti1vbYamnm4yg6Lc4zngqvob91xN6qcZHG1WS1EK5ftQ4z8piLXP/1LQKBgAtS\ne7bencgTmplkpQB/ZLGLPSpq4ASKR1ntVMKZ5Za0QqW/Q5FoCX9+YM8camc+44t+\nbVwqF+vjtV8NkHV6M5LA1YuqnT8T1qF1nKG7bscvDKXsicR8/dva5fYWeV2gnAHB\nny4h+1VMqOEqA8lgB0AMK0kTdBDZJ7f8xwTHQkXRAoGANyzedJOH0pGz/Cb82Gqi\nUYCpbV7insg98XPTX3YwHFbu7aZ/DSDXH/C+jdJyPmBsJJmyR1wl0IFQBq3oFWbq\nJMsfChT9KOK1tmdLy3+RdsK8rECfLrPLeqqXWId+EJOPXkDw7MB89plq0RZwcTUA\nBKJSU/8QNrOjGvNVq1b7GH0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "romanuch41@bubbly-benefit-448908-i8.iam.gserviceaccount.com",
+  "client_id": "107522992356806873426",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/romanuch41%40bubbly-benefit-448908-i8.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
