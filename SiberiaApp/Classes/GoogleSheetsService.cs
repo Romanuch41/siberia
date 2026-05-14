@@ -17,9 +17,14 @@ namespace SiberiaApp.Classes
 
         public GoogleSheetsService(Stream serviceAccountJsonPath, string applicationName = "SiberiaApp")
         {
+            // устарело
+            
             var credential = GoogleCredential
                 .FromStream(serviceAccountJsonPath)
                 .CreateScoped(SheetsService.Scope.Spreadsheets);
+            
+            //устарело
+                
 
             _sheets = new SheetsService(new BaseClientService.Initializer
             {
