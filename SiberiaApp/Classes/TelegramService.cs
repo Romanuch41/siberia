@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using RabbitMQ.Client;
+using SiberiaApp.Interface;
 
 // TelegramService подготовлен для авторизации пользователей в будеющем будет ещё использоваться для оповещений
 // нужно обязательно убрать токен из кода, исопльзовать REST API и реализовать отправку сообщений через API с google apps script
@@ -15,16 +15,19 @@ namespace SiberiaApp.Classes
 {
     public class TelegramService
     {
+        private string veryficationCode = string.Empty;
+        private IMessagePublisher _contract;
 
-        public TelegramService()
+        public TelegramService(IMessagePublisher contract)
         {
-            _httpClient = new HttpClient();
-            factory = new ConnectionFactory()
-            {
-                HostName = "localhost"
-            };
-            using var connection = factory.CreateConnectionAsync();
-            var channel = connection.Cre
+            _contract = contract;
+        }
+
+        public async Task SendVerificationCode(string chatid, string veryficationCode)
+        {
+            if (string.IsNullOrWhiteSpace(chatid) || string.IsNullOrWhiteSpace(veryficationCode))
+                throw new ArgumentNullException(nameof(chatid));
+
             
         }
 
